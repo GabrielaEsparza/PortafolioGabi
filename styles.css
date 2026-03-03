@@ -1,0 +1,456 @@
+/* ================= GENERAL ================= */
+
+body {
+    background-color: #f5efed;
+    font-family: 'Segoe UI', sans-serif;
+    color: #333;
+}
+
+.custom-navbar {
+    background-color: #e7a8a1;
+    padding: 15px 0;
+}
+
+.nav-link {
+    font-weight: 500;
+    color: #5a4a4a !important;
+}
+
+.nav-link:hover {
+    color: white !important;
+}
+
+
+/* ================= SOBRE MI ================= */
+
+.hero-section {
+    min-height: 100vh;
+}
+
+
+.profile-img {
+    width: 260px;
+    height: 260px;
+    background-image: url("assets/perfil.png"); 
+    border-radius: 50%;
+    margin: auto;
+    background-size: cover;
+    background-position: center;
+
+    border: 3px solid transparent;
+    transition: all 0.4s ease;
+}
+
+/* Hover efecto glow + zoom */
+.profile-img:hover {
+    transform: scale(1.08);
+    border-color: #e7a8a1;
+    box-shadow: 0 0 25px rgba(231,168,161,0.7);
+}
+
+.name {
+    font-size: 3rem;
+    color: #e7a8a1;
+    font-weight: bold;
+}
+
+.subtitle {
+    color: #7c6b6b;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    color: #e7a8a1;
+    margin-bottom: 20px;
+}
+
+p {
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+/* Botones */
+
+.custom-btn {
+    background-color: #f0b7ad;
+    border: 2px solid transparent;
+    padding: 10px 20px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.pink-btn {
+    background-color: #e36ba5;
+    color: white;
+}
+
+.custom-btn:hover {
+    transform: scale(1.08);
+    border: 2px solid #ffffff;
+    box-shadow: 0 0 15px rgba(255,255,255,0.9);
+}
+
+/* Traits */
+
+.trait-box {
+    padding: 10px 20px;
+    border: 1px solid #e7a8a1;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.trait-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(231,168,161,0.6);
+}
+
+/* Scroll indicator */
+
+.scroll-indicator {
+    font-size: 14px;
+    color: #7c6b6b;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 992px) {
+    .name {
+        font-size: 2.2rem;
+    }
+
+    .section-title {
+        text-align: center;
+        margin-top: 30px;
+    }
+
+    .traits {
+        justify-content: center;
+    }
+}
+
+/* ================= PROYECTOS ================= */
+
+.projects-section {
+    padding: 120px 0;
+    background: #f5efed;
+    position: relative;
+}
+
+/* 🔥 CONTENEDOR DEL CARRUSEL (CLAVE PARA QUE NO SE BAJEN) */
+.carousel-container {
+    position: relative;
+    width: 100%;
+    max-width: 1100px;
+    height: 480px; /* 🔥 altura fija obligatoria */
+    margin: 0 auto;
+}
+
+/* ================= TARJETAS ================= */
+
+.project-card {
+    width: 320px;
+    height: 420px;
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: transform 0.6s ease, opacity 0.6s ease;
+    opacity: 0;
+    cursor: pointer;
+    perspective: 1200px;
+}
+
+/* Estados del carrusel */
+
+.project-card.active {
+    opacity: 1;
+    z-index: 3;
+    transform: translateX(-50%) scale(1.1);
+}
+
+.project-card.left {
+    transform: translateX(calc(-50% - 380px)) scale(0.9);
+    opacity: 0.7;
+    z-index: 2;
+}
+
+.project-card.right {
+    transform: translateX(calc(-50% + 380px)) scale(0.9);
+    opacity: 0.7;
+    z-index: 2;
+}
+
+/* ================= FLIP ================= */
+
+.card-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: transform 0.8s ease;
+    transform-style: preserve-3d;
+}
+
+.project-card.flipped .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border-radius: 20px;
+    overflow: hidden;
+    backface-visibility: hidden;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+/* ================= FRONT ================= */
+
+.card-front {
+    background: white;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+/* Imagen con difuminado */
+
+.card-front::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 55%;
+    pointer-events: none; /* 🔥 importante */
+    background: linear-gradient(
+        to top,
+        rgba(245,239,237,1) 10%,
+        rgba(245,239,237,0.8) 40%,
+        rgba(245,239,237,0) 100%
+    );
+}
+
+.card-content {
+    position: absolute;
+    bottom: 25px;
+    left: 25px;
+    z-index: 2;
+}
+
+/* ================= BACK ================= */
+
+.card-back {
+    background: #fff;
+    transform: rotateY(180deg);
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+}
+
+/* ================= BOTONES ================= */
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: none;
+    background: #e7a8a1;
+    color: white;
+    font-size: 24px;
+    z-index: 10;
+    cursor: pointer;
+}
+
+.carousel-btn.left {
+    left: 2%;
+}
+
+.carousel-btn.right {
+    right: 2%;
+}
+
+.carousel-btn:hover {
+    transform: translateY(-50%) scale(1.1);
+    box-shadow: 0 0 20px rgba(231,168,161,0.6);
+}
+/* ALERTA FLOTANTE */
+
+.project-alert {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    background: #e7a8a1;
+    padding: 15px 45px 15px 25px; /* espacio extra para la X */
+    border-radius: 15px;
+    display: none;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    color: white;
+    font-weight: 500;
+    z-index: 1000;
+}
+
+/* BOTÓN CERRAR (X) */
+
+.close-alert {
+    position: absolute;
+    top: 6px;
+    right: 10px;
+    background: transparent;
+    border: none;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    line-height: 1;
+}
+
+.close-alert:hover {
+    opacity: 0.7;
+}
+
+.project-alert {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    background: #e7a8a1;
+    padding: 15px 45px 15px 25px;
+    border-radius: 15px;
+    display: none;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    color: white;
+    font-weight: 500;
+    z-index: 1000;
+    position: fixed;
+}
+
+/* ================= FORMACION ================= */
+
+.formacion-section {
+    background-color: #f5efee;
+    padding: 100px 0;
+}
+
+.section-title {
+    font-size: 42px;
+    color: #e7a8a1;
+    font-weight: 600;
+}
+
+/* ===== Timeline ===== */
+
+.timeline {
+    position: relative;
+    padding-left: 30px;
+}
+
+.timeline::before {
+    content: "";
+    position: absolute;
+    left: 10px;
+    top: 0;
+    width: 2px;
+    height: 100%;
+    background: #e7a8a1;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.timeline-dot {
+    position: absolute;
+    left: -4px;
+    top: 15px;
+    width: 12px;
+    height: 12px;
+    background: #e7a8a1;
+    border-radius: 50%;
+}
+
+/* ===== Cards ===== */
+
+.edu-card,
+.course-card,
+.language-card {
+    background: #fff;
+    border: 1px solid #f0c8c4;
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 20px;
+    transition: 0.3s ease;
+}
+
+.institution {
+    color: #e7a8a1;
+    font-weight: 500;
+    display: block;
+}
+
+.date,
+.year {
+    font-size: 14px;
+    color: #999;
+}
+
+.language-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.badge-b2 {
+    background: #f8d4d0;
+    color: #e7a8a1;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+}
+/* ================= HOVER TARJETAS ================= */
+
+.card-effect {
+    transition: all 0.35s ease;
+    cursor: pointer;
+}
+
+.card-effect:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 40px rgba(231, 168, 161, 0.35);
+    border-color: #e7a8a1;
+}
+
+/* ================= ANIMACION ENTRADA ================= */
+
+.reveal-left,
+.reveal-right {
+    opacity: 0;
+    transition: all 0.9s ease;
+}
+
+.reveal-left {
+    transform: translateX(-100px);
+}
+
+.reveal-right {
+    transform: translateX(100px);
+}
+
+.reveal-visible {
+    opacity: 1;
+    transform: translateX(0);
+}

@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gabriela Esparza | Portafolio</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<!----------------------- NAVBAR ----------------------->
+<nav class="navbar navbar-expand-lg navbar-light sticky-top custom-navbar">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="#"> &lt;/&gt; </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+            <ul class="navbar-nav gap-4">
+                <li class="nav-item"><a class="nav-link" href="#">Sobre Mí</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Proyectos</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Formación</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Habilidades</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Servicios</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Más Allá del Código</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Contacto</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+<!----------------------- SOBRE MI ----------------------->
+<section class="hero-section d-flex align-items-center" id="sobre-mi">
+    <div class="container">
+        <div class="row align-items-center">
+
+            <!-- Foto -->
+            <div class="col-lg-5 text-center mb-4">
+                <div class="profile-img"></div>
+                <h1 class="name mt-4">Gabriela Esparza</h1>
+                <h5 class="subtitle">Desarrolladora Web</h5>
+
+                <div class="mt-4 d-flex justify-content-center gap-3 flex-wrap">
+                    <button class="btn custom-btn" onclick="scrollToSection()">Ver Proyectos</button>
+                    <button class="btn custom-btn pink-btn">Contactar</button>
+                </div>
+            </div>
+
+            <!-- Texto -->
+            <div class="col-lg-7">
+                <h2 class="section-title">Sobre Mí</h2>
+
+                <p>
+                    Soy Gabriela Esparza, Desarrolladora Java Full Stack Jr. y Licenciada en Ciencias Físicas con habilidades en programación, certificaciones en Desarrollo Web y Metodologías Ágiles y Scrum por IBM. Cuento con experiencia práctica participando en todas las etapas de creación de software, desde el análisis y diseño hasta la implementación y mantenimiento.
+                </p>
+
+                <p>
+                    Me enfoco a la construcción de soluciones eficientes, escalables y alineadas a las necesidades del negocio y el usuario. Me caracterizo por la mejora continua, el trabajo en equipo y mi persistencia. Busco integrarme a una organización donde pueda aportar valor, contribuir a los logros de los objetivos y seguir fortaleciendo mis habilidades profesionales.
+                </p>
+
+                <a href="cv.pdf" download class="btn custom-btn mt-3">
+                    Descargar CV
+                </a>
+
+                <div class="traits mt-4 d-flex gap-3 flex-wrap">
+                    <div class="trait-box">Persistente</div>
+                    <div class="trait-box">Creativa</div>
+                    <div class="trait-box">Curiosa</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll animado -->
+        <div class="scroll-indicator text-center mt-5">
+            ↓ Scroll para explorar
+        </div>
+
+    </div>
+</section>
+
+
+<!----------------------- PROYECTOS ----------------------->
+<section id="proyectos" class="projects-section">
+
+    <div class="container text-center">
+        <h2 class="section-title mb-5">Mis Proyectos</h2>
+
+        <div class="carousel-wrapper">
+
+            <!-- Botón izquierda -->
+            <button class="carousel-btn left" onclick="moveSlide(-1)">
+                &#10094;
+            </button>
+
+            <div class="carousel-container">
+
+                <!--------------------------------Tarjetas de proyectos-------------------------------->
+                <!-- PROYECTO 1 -->
+                <div class="project-card" onclick="flipCard(this)">
+                    <div class="card-inner">
+
+                        <div class="card-front">
+                            <img src="img/proyecto1.jpg">
+                            <div class="card-content">
+                                <h4>Plataforma Delivery Tatsu</h4>
+                                <div class="tech">HTML CSS Bootstrap Java MySQL</div>
+                            </div>
+                        </div>
+
+                        <div class="card-back">
+                            <p>Sistema completo de delivery con autenticación y panel administrador.</p>
+                            <a href="#" class="btn custom-btn">Ver Demo</a>
+                            <a href="#" class="btn custom-btn pink-btn">Ver Código</a>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- PROYECTO 2 -->
+                <div class="project-card" onclick="flipCard(this)">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <img src="img/proyecto2.jpg">
+                            <div class="card-content">
+                                <h4>Portafolio Personal</h4>
+                                <div class="tech">HTML CSS JS</div>
+                            </div>
+                        </div>
+                        <div class="card-back">
+                            <p>Portafolio interactivo con animaciones modernas.</p>
+                            <a href="#" class="btn custom-btn">Ver Demo</a>
+                            <a href="#" class="btn custom-btn pink-btn">Ver Código</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PROYECTO 3 -->
+                <div class="project-card" onclick="flipCard(this)">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <img src="assets/hiloNacional.png">
+                            <div class="card-content">
+                                <h4>Hilo Nacional</h4>
+                                <div class="tech">Python Java</div>
+                            </div>
+                        </div>
+                        <div class="card-back">
+                            <p>E-commerce de talento local.</p>
+                            <a href="#" class="btn custom-btn">Ver Demo</a>
+                            <a href="#" class="btn custom-btn pink-btn">Ver Código</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PROYECTO 4 -->
+                <div class="project-card" onclick="flipCard(this)">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <img src="img/proyecto4.jpg">
+                            <div class="card-content">
+                                <h4>Sistema Escolar</h4>
+                                <div class="tech">Java MySQL</div>
+                            </div>
+                        </div>
+                        <div class="card-back">
+                            <p>CRUD completo con base de datos relacional.</p>
+                            <a href="#" class="btn custom-btn">Ver Demo</a>
+                            <a href="#" class="btn custom-btn pink-btn">Ver Código</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PROYECTO 5 -->
+                <div class="project-card" onclick="flipCard(this)">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <img src="img/proyecto5.jpg">
+                            <div class="card-content">
+                                <h4>App Agenda</h4>
+                                <div class="tech">Java POO</div>
+                            </div>
+                        </div>
+                        <div class="card-back">
+                            <p>Agenda de contactos con encapsulamiento y POO.</p>
+                            <a href="#" class="btn custom-btn">Ver Demo</a>
+                            <a href="#" class="btn custom-btn pink-btn">Ver Código</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PROYECTO 6 -->
+                <div class="project-card" onclick="flipCard(this)">
+                    
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <img src="assets/proActive.png">
+                            <div class="card-content">
+                                <h4>Tienda Deportiva</h4>
+                                <div class="tech">HTML CSS Bootstrap JS</div>
+                            </div>
+                        </div>
+                        <div class="card-back">
+                            <p>Ecommerce responsivo con carrito dinámico.</p>
+                            <a href="https://gabrielaesparza.github.io/1er-Hackathon-tienda-deportiva/" class="btn custom-btn">Ver Demo</a>
+                            <a href="https://github.com/GabrielaEsparza/1er-Hackathon-tienda-deportiva" class="btn custom-btn pink-btn">Ver Código</a>
+                        </div>
+                    </div>
+                    
+                </div>
+
+            </div>
+
+
+
+
+            <!-- Botón derecha -->
+            <button class="carousel-btn right" onclick="moveSlide(1)">
+                &#10095;
+            </button>
+
+        </div>
+    </div>
+
+   <!-- ALERTA FLOTANTE -->
+<div class="project-alert" id="projectAlert">
+    <span>¿Tienes alguna idea de proyecto?</span>
+    <br>
+    <span href="#sobre-mi">¡Contáctame!</span>
+
+    <button class="close-alert" onclick="closeAlert()">×</button>
+</div>
+</section>
+
+<!------------------------------------FORMACION----------------------------------------------------->
+
+<section id="formacion" class="formacion-section">
+
+    <div class="container">
+        <h2 class="section-title text-center">Formación</h2>
+
+        <div class="row mt-5">
+
+            <!-- ================= EDUCACIÓN ================= -->
+            <div class="col-lg-7">
+
+                <h4 class="mb-4">
+                    <i class="fa-solid fa-graduation-cap me-2"></i> Educación
+                </h4>
+
+                <div class="timeline">
+
+                    <!-- ITEM -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="edu-card card-effect reveal-left">
+                            <h5>Bootcamp Desarrollador Java Full Stack Jr.</h5>
+                            <span class="institution">Generation México</span>
+                            <p class="date">Diciembre 2025 - Marzo 2026</p>
+                            <p>
+                                Formación intensiva en desarrollo Full Stack con Java,
+                                Spring Boot, JavaScript, React y bases de datos.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="edu-card card-effect reveal-left">
+                            <h5>Licenciatura en Física</h5>
+                            <span class="institution">Universidad de Guadalajara</span>
+                            <p class="date">Agosto 2019 - Diciembre 2024</p>
+                            <p>
+                                Análisis de datos, modelado matemático, programación científica
+                                y pensamiento lógico-matemático.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="edu-card card-effect reveal-left">
+                            <h5>Certificado Inglés B2</h5>
+                            <span class="institution">Proulex - Escuela de Inglés</span>
+                            <p class="date">2020 - 2023</p>
+                            <p>
+                                Certificación en nivel intermedio avanzado de inglés.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- ================= CURSOS E IDIOMAS ================= -->
+            <div class="col-lg-5">
+
+                <h4 class="mb-4">
+                    <i class="fa-solid fa-award me-2"></i> Cursos
+                </h4>
+
+                <div class="course-card card-effect reveal-right">
+                    <h6>Introduction to Front-End Development</h6>
+                    <span>Coursera</span>
+                    <p class="year">2025</p>
+                </div>
+
+                <div class="course-card card-effect reveal-right">
+                    <h6>Introduction to Java</h6>
+                    <span>Learning to Earning</span>
+                    <p class="year">2025</p>
+                </div>
+
+                <div class="course-card card-effect reveal-right">
+                    <h6>Programming with JavaScript</h6>
+                    <span>Coursera</span>
+                    <p class="year">2026</p>
+                </div>
+
+                <div class="course-card card-effect reveal-right">
+                    <h6>Introduction to Agile Development and Scrum</h6>
+                    <span>IBM</span>
+                    <p class="year">2026</p>
+                </div>
+
+                <h4 class="mt-5 mb-3">
+                    <i class="fa-solid fa-globe me-2"></i> Idiomas
+                </h4>
+
+                <div class="language-card card-effect reveal-right">
+                    <div>
+                        <h6>Inglés</h6>
+                        <p>Nivel Intermedio-Avanzado</p>
+                    </div>
+                    <span class="badge-b2">B2</span>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+</section>
+
+
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- JS -->
+<script src="script.js"></script>
+
+</body>
+</html>
