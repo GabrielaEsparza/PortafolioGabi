@@ -7,18 +7,19 @@
 
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
     <!-- CSS -->
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
 </head>
 <body>
 
 <!----------------------- NAVBAR ----------------------->
-<nav class="navbar navbar-expand-lg navbar-light sticky-top custom-navbar">
+<nav class="navbar navbar-expand-lg sticky-top custom-navbar">
     <div class="container">
-        <a class="navbar-brand fw-bold" href="#"> &lt;/&gt; </a>
+        <a class="navbar-brand fw-bold" href="#">Gabi</a>
 
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
             <span class="navbar-toggler-icon"></span>
@@ -26,14 +27,18 @@
 
         <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
             <ul class="navbar-nav gap-4">
-                <li class="nav-item"><a class="nav-link" href="#">Sobre Mí</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Proyectos</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Formación</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Habilidades</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Servicios</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Más Allá del Código</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Contacto</a></li>
+                <li class="nav-item"><a class="nav-link" href="#sobre-mi">Sobre Mí</a></li>
+                <li class="nav-item"><a class="nav-link" href="#proyectos">Proyectos</a></li>
+                <li class="nav-item"><a class="nav-link" href="#formacion">Formación</a></li>
+                <li class="nav-item"><a class="nav-link" href="#habilidades">Habilidades</a></li>
+                <li class="nav-item"><a class="nav-link" href="#mas-alla">Más Allá del Código</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
             </ul>
+
+            <!-- Botón modo oscuro -->
+            <button id="darkModeToggle" class="btn ms-lg-4 dark-btn">
+                🌙
+            </button>
         </div>
     </div>
 </nav>
@@ -68,7 +73,7 @@
                     Me enfoco a la construcción de soluciones eficientes, escalables y alineadas a las necesidades del negocio y el usuario. Me caracterizo por la mejora continua, el trabajo en equipo y mi persistencia. Busco integrarme a una organización donde pueda aportar valor, contribuir a los logros de los objetivos y seguir fortaleciendo mis habilidades profesionales.
                 </p>
 
-                <a href="cv.pdf" download class="btn custom-btn mt-3">
+                <a href="Claudia Gabriela Jaime Esparza CV.pdf" download class="btn custom-btn mt-3">
                     Descargar CV
                 </a>
 
@@ -104,138 +109,187 @@
 
             <div class="carousel-container">
 
-                <!--------------------------------Tarjetas de proyectos-------------------------------->
-                <!-- PROYECTO 1 -->
-                <div class="project-card" onclick="flipCard(this)">
-                    <div class="card-inner">
+               <!--------------------------------Tarjetas de proyectos-------------------------------->
 
-                        <div class="card-front">
-                            <img src="img/proyecto1.jpg">
-                            <div class="card-content">
-                                <h4>Plataforma Delivery Tatsu</h4>
-                                <div class="tech">HTML CSS Bootstrap Java MySQL</div>
-                            </div>
-                        </div>
+<!-- PROYECTO 1 -->
+<div class="project-card" onclick="flipCard(this)">
+  <div class="card-inner">
 
-                        <div class="card-back">
-                            <p>Sistema completo de delivery con autenticación y panel administrador.</p>
-                            <a href="#" class="btn custom-btn">Ver Demo</a>
-                            <a href="#" class="btn custom-btn pink-btn">Ver Código</a>
-                        </div>
+    <div class="card-front">
+      <img src="assets/tatsu.png" class="project-img">
 
-                    </div>
-                </div>
+      <div class="card-content">
+        <h4>Plataforma Delivery Tatsu</h4>
 
-                <!-- PROYECTO 2 -->
-                <div class="project-card" onclick="flipCard(this)">
-                    <div class="card-inner">
-                        <div class="card-front">
-                            <img src="img/proyecto2.jpg">
-                            <div class="card-content">
-                                <h4>Portafolio Personal</h4>
-                                <div class="tech">HTML CSS JS</div>
-                            </div>
-                        </div>
-                        <div class="card-back">
-                            <p>Portafolio interactivo con animaciones modernas.</p>
-                            <a href="#" class="btn custom-btn">Ver Demo</a>
-                            <a href="#" class="btn custom-btn pink-btn">Ver Código</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- PROYECTO 3 -->
-                <div class="project-card" onclick="flipCard(this)">
-                    <div class="card-inner">
-                        <div class="card-front">
-                            <img src="assets/hiloNacional.png">
-                            <div class="card-content">
-                                <h4>Hilo Nacional</h4>
-                                <div class="tech">Python Java</div>
-                            </div>
-                        </div>
-                        <div class="card-back">
-                            <p>E-commerce de talento local.</p>
-                            <a href="#" class="btn custom-btn">Ver Demo</a>
-                            <a href="#" class="btn custom-btn pink-btn">Ver Código</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- PROYECTO 4 -->
-                <div class="project-card" onclick="flipCard(this)">
-                    <div class="card-inner">
-                        <div class="card-front">
-                            <img src="img/proyecto4.jpg">
-                            <div class="card-content">
-                                <h4>Sistema Escolar</h4>
-                                <div class="tech">Java MySQL</div>
-                            </div>
-                        </div>
-                        <div class="card-back">
-                            <p>CRUD completo con base de datos relacional.</p>
-                            <a href="#" class="btn custom-btn">Ver Demo</a>
-                            <a href="#" class="btn custom-btn pink-btn">Ver Código</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- PROYECTO 5 -->
-                <div class="project-card" onclick="flipCard(this)">
-                    <div class="card-inner">
-                        <div class="card-front">
-                            <img src="img/proyecto5.jpg">
-                            <div class="card-content">
-                                <h4>App Agenda</h4>
-                                <div class="tech">Java POO</div>
-                            </div>
-                        </div>
-                        <div class="card-back">
-                            <p>Agenda de contactos con encapsulamiento y POO.</p>
-                            <a href="#" class="btn custom-btn">Ver Demo</a>
-                            <a href="#" class="btn custom-btn pink-btn">Ver Código</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- PROYECTO 6 -->
-                <div class="project-card" onclick="flipCard(this)">
-                    
-                    <div class="card-inner">
-                        <div class="card-front">
-                            <img src="assets/proActive.png">
-                            <div class="card-content">
-                                <h4>Tienda Deportiva</h4>
-                                <div class="tech">HTML CSS Bootstrap JS</div>
-                            </div>
-                        </div>
-                        <div class="card-back">
-                            <p>Ecommerce responsivo con carrito dinámico.</p>
-                            <a href="https://gabrielaesparza.github.io/1er-Hackathon-tienda-deportiva/" class="btn custom-btn">Ver Demo</a>
-                            <a href="https://github.com/GabrielaEsparza/1er-Hackathon-tienda-deportiva" class="btn custom-btn pink-btn">Ver Código</a>
-                        </div>
-                    </div>
-                    
-                </div>
-
-            </div>
-
-
-
-
-            <!-- Botón derecha -->
-            <button class="carousel-btn right" onclick="moveSlide(1)">
-                &#10095;
-            </button>
-
+        <div class="tech-icons">
+          <i class="devicon-html5-plain colored"></i>
+          <i class="devicon-css3-plain colored"></i>
+          <i class="devicon-bootstrap-plain colored"></i>
+          <i class="devicon-javascript-plain colored"></i>
         </div>
+      </div>
     </div>
 
+    <div class="card-back">
+      <p>Sistema completo de delivery con autenticación y panel administrador.</p>
+      <a href="#" class="btn custom-btn">Ver Demo</a>
+      <a href="#" class="btn custom-btn pink-btn">Ver Código</a>
+    </div>
+
+  </div>
+</div>
+
+
+<!-- PROYECTO 2 -->
+<!-- <div class="project-card" onclick="flipCard(this)">
+  <div class="card-inner">
+
+    <div class="card-front">
+      <img src="assets/portfolio.png" class="project-img">
+
+      <div class="card-content">
+        <h4>Portafolio Personal</h4>
+
+        <div class="tech-icons">
+          <i class="devicon-html5-plain colored"></i>
+          <i class="devicon-css3-plain colored"></i>
+          <i class="devicon-javascript-plain colored"></i>
+          <i class="devicon-bootstrap-plain colored"></i>
+        </div>
+      </div>
+    </div>
+
+    <div class="card-back">
+      <p>Portafolio interactivo con animaciones modernas.</p>
+      <a href="#" class="btn custom-btn">Ver Demo</a>
+      <a href="#" class="btn custom-btn pink-btn">Ver Código</a>
+    </div>
+
+  </div>
+</div> -->
+
+
+<!-- PROYECTO 3 -->
+<div class="project-card" onclick="flipCard(this)">
+  <div class="card-inner">
+
+    <div class="card-front">
+      <img src="assets/HilosNacional.png" class="project-img">
+
+      <div class="card-content">
+        <h4>Hilo Nacional</h4>
+
+        <div class="tech-icons">
+          <i class="devicon-html5-plain colored"></i>
+          <i class="devicon-css3-plain colored"></i>
+          <i class="devicon-javascript-plain colored"></i>
+        </div>
+      </div>
+    </div>
+
+    <div class="card-back">
+      <p>E-commerce de talento local.</p>
+      <a href="#" class="btn custom-btn">Ver Demo</a>
+      <a href="#" class="btn custom-btn pink-btn">Ver Código</a>
+    </div>
+
+  </div>
+</div>
+
+
+<!-- PROYECTO 4 -->
+<!-- <div class="project-card" onclick="flipCard(this)">
+  <div class="card-inner">
+
+    <div class="card-front">
+      <img src="assets/sistemaEscolar.jpg" class="project-img">
+
+      <div class="card-content">
+        <h4>Sistema Escolar</h4>
+
+        <div class="tech-icons">
+          <i class="devicon-java-plain colored"></i>
+          <i class="devicon-mysql-plain colored"></i>
+        </div>
+      </div>
+    </div>
+
+    <div class="card-back">
+      <p>CRUD completo con base de datos relacional.</p>
+      <a href="#" class="btn custom-btn">Ver Demo</a>
+      <a href="#" class="btn custom-btn pink-btn">Ver Código</a>
+    </div>
+
+  </div>
+</div> -->
+
+
+<!-- PROYECTO 5 -->
+<div class="project-card" onclick="flipCard(this)">
+  <div class="card-inner">
+
+    <div class="card-front">
+      <img src="assets/agenda.png" class="project-img">
+
+      <div class="card-content">
+        <h4>App Agenda</h4>
+
+        <div class="tech-icons">
+          <i class="devicon-java-plain colored"></i>
+        </div>
+      </div>
+    </div>
+
+    <div class="card-back">
+      <p>Agenda de contactos usando principios de POO.</p>
+      <a href="#" class="btn custom-btn">Ver Demo</a>
+      <a href="#" class="btn custom-btn pink-btn">Ver Código</a>
+    </div>
+
+  </div>
+</div>
+
+
+<!-- PROYECTO 6 -->
+<div class="project-card" onclick="flipCard(this)">
+  <div class="card-inner">
+
+    <div class="card-front">
+      <img src="assets/proActive.png" class="project-img">
+
+      <div class="card-content">
+        <h4>Tienda Deportiva</h4>
+
+        <div class="tech-icons">
+          <i class="devicon-html5-plain colored"></i>
+          <i class="devicon-css3-plain colored"></i>
+          <i class="devicon-bootstrap-plain colored"></i>
+          <i class="devicon-javascript-plain colored"></i>
+        </div>
+      </div>
+    </div>
+
+    <div class="card-back">
+      <p>Ecommerce responsivo con carrito dinámico.</p>
+      <a href="https://gabrielaesparza.github.io/1er-Hackathon-tienda-deportiva/" class="btn custom-btn">Ver Demo</a>
+      <a href="https://github.com/GabrielaEsparza/1er-Hackathon-tienda-deportiva" class="btn custom-btn pink-btn">Ver Código</a>
+    </div>
+
+  </div>
+</div>
+</div> <!-- FIN carousel-container -->
+
+<!-- Botón derecha -->
+<button class="carousel-btn right" onclick="moveSlide(1)">
+    &#10095;
+</button>
+
+</div> <!-- FIN carousel-wrapper -->
    <!-- ALERTA FLOTANTE -->
 <div class="project-alert" id="projectAlert">
     <span>¿Tienes alguna idea de proyecto?</span>
     <br>
-    <span href="#sobre-mi">¡Contáctame!</span>
+    <a href="#contacto" class="contact-link">¡Contáctame!</a>
 
     <button class="close-alert" onclick="closeAlert()">×</button>
 </div>
@@ -351,6 +405,340 @@
 
 </section>
 
+<!---------------------------------------HABILIDADES TECNICAS------------------------------------------------------->
+<section id="habilidades" class="skills-section">
+  <div class="container text-center">
+    <h2 class="section-title">Habilidades</h2>
+    <h4 class="mb-5">Habilidades Técnicas</h4>
+
+    <div class="bubble-container" id="bubbleContainer">
+
+      <!-- HTML -->
+      <div class="bubble" data-skill="HTML5">
+        <i class="devicon-html5-plain colored"></i>
+        <span>HTML5</span>
+      </div>
+
+      <!-- CSS -->
+      <div class="bubble" data-skill="CSS">
+        <i class="devicon-css3-plain colored"></i>
+        <span>CSS</span>
+      </div>
+
+      <!-- JavaScript -->
+      <div class="bubble">
+        <i class="devicon-javascript-plain colored"></i>
+        <span>JavaScript</span>
+      </div>
+
+      <!-- Bootstrap -->
+      <div class="bubble">
+        <i class="devicon-bootstrap-plain colored"></i>
+        <span>Bootstrap</span>
+      </div>
+
+      <!-- Python -->
+      <div class="bubble">
+        <i class="devicon-python-plain colored"></i>
+        <span>Python</span>
+      </div>
+
+      <!-- Java -->
+      <div class="bubble">
+        <i class="devicon-java-plain colored"></i>
+        <span>Java</span>
+      </div>
+
+      <!-- MySQL -->
+      <div class="bubble">
+        <i class="devicon-mysql-plain colored"></i>
+        <span>MySQL</span>
+      </div>
+
+      <!-- Git -->
+      <div class="bubble">
+        <i class="devicon-git-plain colored"></i>
+        <span>Git</span>
+      </div>
+
+      <!-- GitHub -->
+      <div class="bubble">
+        <i class="devicon-github-original"></i>
+        <span>GitHub</span>
+      </div>
+
+      <!-- Data & IA -->
+      <div class="bubble">
+        <i class="fas fa-robot"></i>
+        <span>Data & IA</span>
+      </div>
+
+      <!-- Figma -->
+      <div class="bubble">
+        <i class="devicon-figma-plain colored"></i>
+        <span>Figma</span>
+      </div>
+
+      <!-- Scrum -->
+      <div class="bubble">
+        <i class="devicon-trello-plain colored"></i>
+        <span>Scrum</span>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-------------------------------------------------------HABILIDADES BLANDAS-------------------------------------------------->
+<section class="habilidades-blandas">
+
+  <h2 class="titulo-seccion">Habilidades Blandas</h2>
+
+  <div class="habilidades-grid">
+
+    <div class="habilidad hab-left">
+      <div class="icono">
+        <i class="bi bi-lightning-fill"></i>
+      </div>
+      <span>Proactiva</span>
+    </div>
+
+    <div class="habilidad hab-top">
+      <div class="icono">
+        <i class="bi bi-check2-circle"></i>
+      </div>
+      <span>Ordenada</span>
+    </div>
+
+    <div class="habilidad hab-right">
+      <div class="icono">
+        <i class="bi bi-trophy-fill"></i>
+      </div>
+      <span>Tenaz</span>
+    </div>
+
+    <div class="habilidad hab-left">
+      <div class="icono">
+        <i class="bi bi-people-fill"></i>
+      </div>
+      <span>Trabajo en equipo</span>
+    </div>
+
+    <div class="habilidad hab-bottom">
+      <div class="icono">
+        <i class="bi bi-search"></i>
+      </div>
+      <span>Atención al detalle</span>
+    </div>
+
+    <div class="habilidad hab-right">
+      <div class="icono">
+        <i class="bi bi-rocket-takeoff-fill"></i>
+      </div>
+      <span>Rápida adaptación</span>
+    </div>
+
+  </div>
+
+</section>
+
+<!-----------------------------------------------Mas Alla del codigo---------------------------------------------------------->
+
+<section id="mas-alla" class="beyond-section">
+
+  <div class="container text-center">
+    <h2 class="section-title">Más Allá del Código</h2>
+    <p class="section-subtitle">
+      Porque la vida es más que programar, estas son las cosas que me apasionan e inspiran fuera del mundo digital
+    </p>
+
+    <div class="hobby-grid">
+
+      <!-- Senderismo -->
+      <div class="hobby-card"
+           data-title="Senderismo"
+           data-img="./assets/senderismo.png">
+        <img src="./assets/senderismo.png" alt="Senderismo">
+        <div class="overlay">
+          <h5>Senderismo</h5>
+        </div>
+      </div>
+
+      <!-- Running -->
+      <div class="hobby-card"
+           data-title="Running"
+           data-img="img/running.jpg">
+        <img src="./assets/running.png" alt="Running">
+        <div class="overlay">
+          <h5>Running</h5>
+        </div>
+      </div>
+
+      <!-- Música / Cello -->
+      <div class="hobby-card"
+           data-title="Música / Cello"
+           data-img="img/cello.jpg"
+           data-spotify="https://open.spotify.com/user/12165118040?si=26110b8c701648c0">
+        <img src="assets/cello.png" alt="Música Cello">
+        <div class="overlay">
+          <h5>Música / Cello</h5>
+        </div>
+      </div>
+
+      <!-- Básquetbol -->
+      <div class="hobby-card"
+           data-title="Básquetbol"
+           data-img="img/basquet.jpg">
+        <img src="assets/basquet.png" alt="Basquetbol">
+        <div class="overlay">
+          <h5>Básquetbol</h5>
+        </div>
+      </div>
+
+      <!-- Gym -->
+      <div class="hobby-card"
+           data-title="Gym"
+           data-img="img/gym.jpg">
+        <img src="assets/gym.png" alt="Gym">
+        <div class="overlay">
+          <h5>Gym</h5>
+        </div>
+      </div>
+
+      <!-- Bailar -->
+      <div class="hobby-card"
+           data-title="Bailar"
+           data-img="img/bailar.jpg">
+        <img src="./assets/ciencia.png" alt="ejercicios Fisica">
+        <div class="overlay">
+          <h5>Ciencias Físicas</h5>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</section>
+
+
+<!-- ================= MODAL ================= -->
+
+<div class="custom-modal" id="customModal">
+  <span class="close-modal">&times;</span>
+
+  <div class="modal-content">
+    <img id="modalImg" src="" alt="">
+
+    <div class="modal-info">
+      <h3 id="modalTitle"></h3>
+      <a id="spotifyBtn" target="_blank" class="spotify-btn">
+        Ver en Spotify
+      </a>
+    </div>
+
+  </div>
+</div>
+
+<!-------------------------------------------------CONTACTO-------------------------------------------------->
+<section id="contacto" class="contact-section">
+
+  <div class="container">
+
+    <h2 class="section-title text-center">Contacto</h2>
+
+    <div class="row mt-5">
+
+      <!-- IZQUIERDA -->
+      <div class="col-lg-6">
+
+        <h3>Envíame un mensaje</h3>
+        <p class="subtitle">
+          ¿Tienes un proyecto en mente? ¡Me encantaría escuchar sobre él!
+        </p>
+
+        <form id="contactForm">
+
+          <label>Nombre</label>
+          <input type="text" class="form-control">
+
+          <label>Email</label>
+          <input type="email" class="form-control">
+
+          <label>Mensaje</label>
+          <textarea class="form-control" rows="5"></textarea>
+
+          <button type="submit" class="btn-send">
+            ✈ Enviar Mensaje
+          </button>
+
+        </form>
+
+      </div>
+
+      <!-- DERECHA -->
+      <div class="col-lg-6">
+
+        <h3>Información de Contacto</h3>
+
+        <div class="info-card copy-item" data-copy="gabriealesparza4822@gmail.com">
+          <span>📧</span>
+          <div>
+            <small>Email</small>
+            <p>gabriealesparza4822@gmail.com</p>
+          </div>
+        </div>
+
+        <div class="info-card copy-item" data-copy="+523841150465">
+          <span>📞</span>
+          <div>
+            <small>Teléfono</small>
+            <p>(+52) 3841150465</p>
+          </div>
+        </div>
+
+        <div class="info-card">
+          <span>📍</span>
+          <div>
+            <small>Ubicación</small>
+            <p>Guadalajara, Jal. México</p>
+          </div>
+        </div>
+
+        <h4 class="mt-4">Encuéntrame en</h4>
+
+        <div class="social-grid">
+
+          <a href="https://www.linkedin.com/in/gabrielaesparza-developer/" class="social-card">
+            🔗
+            <p>LinkedIn</p>
+          </a>
+
+          <a href="https://github.com/GabrielaEsparza" class="social-card">
+            💻
+            <p>GitHub</p>
+          </a>
+
+          <a href="https://gabrielaesparza.github.io/PortafolioGabi/" class="social-card">
+            📄
+            <p>Portafolio</p>
+          </a>
+
+        </div>
+
+        <div class="availability-card mt-4">
+          <h5>Disponibilidad</h5>
+          <p>Actualmente disponible para nuevos proyectos</p>
+          <span class="status-dot"></span>
+          <span class="status-text">Disponible ahora</span>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
 
 
 <!-- Bootstrap JS -->
