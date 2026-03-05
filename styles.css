@@ -837,14 +837,27 @@ p {
   color: #2b1d1a;
 }
 
-/* GRID */
+/* GRID RESPONSIVE */
 .habilidades-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr); /* 3 columnas por defecto */
   gap: 30px;
-  perspective: 1000px; /* 🔥 Activa 3D */
+  perspective: 1000px;
 }
 
+/* Tablets / pantallas medianas */
+@media (max-width: 992px) {
+  .habilidades-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas */
+  }
+}
+
+/* Móviles / pantallas pequeñas */
+@media (max-width: 576px) {
+  .habilidades-grid {
+    grid-template-columns: 1fr; /* 1 columna */
+  }
+}
 /* CARD */
 .habilidad {
   background: #f7e6e3;
